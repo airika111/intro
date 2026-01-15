@@ -1,4 +1,1 @@
-# Minu Veeb (projektinimi)
-
-Lühikirjeldus: ...
 
