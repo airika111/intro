@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="et">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Õpetaja koduleht — Avaleht</title>
+  <style>
+    :root{--accent:#2b6cb0;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;line-height:1.5;margin:0;color:#222}
+    header{background:linear-gradient(90deg, rgba(43,108,176,0.95), rgba(59,130,246,0.9));color:#fff;position:sticky;top:0;z-index:100}
+    .container{max-width:1000px;margin:0 auto;padding:1rem}
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:700}
+    .menu{display:flex;gap:0.5rem}
+    .menu a{color:rgba(255,255,255,0.95);text-decoration:none;padding:0.6rem 0.8rem;border-radius:6px;font-weight:600}
+    .menu a:hover{background:rgba(255,255,255,0.08)}
+    main{padding:2rem 1rem}
+    .hero{display:flex;gap:1.5rem;align-items:center}
+    .hero img{width:140px;height:140px;object-fit:cover;border-radius:8px;border:4px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+    .intro h1{margin:0 0 0.3rem 0;font-size:1.6rem}
+    .intro p{margin:0;color:var(--muted)}
+    section{margin-top:2rem;padding:1.2rem;background:#fafafa;border-radius:10px}
+    h2{margin-top:0}
+    footer{padding:1rem;text-align:center;color:var(--muted);font-size:0.9rem}
+    /* Responsive */
+    @media (max-width:720px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .menu{display:none}
+      .mobile-menu{display:inline-block}
+    }
+    /* Mobile menu button */
+    .mobile-menu{display:none}
+    .mobile-menu button{background:transparent;border:1px solid rgba(255,255,255,0.18);color:#fff;padding:6px 8px;border-radius:6px}
+    /* Simple section grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+    a.anchor{color:var(--accent);text-decoration:none}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Õpetaja Koduleht</div>
+        <div class="menu" id="topMenu">
+          <a href="#home">Avaleht</a>
+          <a href="#opetaja">Õpetaja</a>
+          <a href="#tunniplaan">Tunniplaan</a>
+          <a href="#materjalid">Materjalid</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+        <div class="mobile-menu">
+          <button id="menuToggle" aria-expanded="false" aria-controls="topMenu">Menüü</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Avaleht (tutvustus) -->
+    <section id="home">
+      <div class="hero">
+        <img src="https://via.placeholder.com/300x300.png?text=Õpetaja" alt="Õpetaja foto (asenduspilt)" />
+        <div class="intro">
+          <h1>Tere! Mina olen [Õpetaja Nimi]</h1>
+          <p>Olen aineõpetaja/klassijuhataja, kelle kirg on aidata õpilastel õppida ja kasvada. Mul on X-aastane kogemus, ning õpetan <strong>matemaatikat</strong>/<strong>eesti keelt</strong> jne. Sellel kodulehel leiad tunniplaani, õppematerjale ja kontaktivõimalused.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Õpetaja -->
+    <section id="opetaja">
+      <h2>Õpetaja kohta</h2>
+      <p>Siin võid kirja panna lühiülevaate: haridustaust, töökogemus, õpetamismetoodika ja huvid. Näiteks:</p>
+      <ul>
+        <li>Haridus: Tallinna Ülikool, magistrikraad</li>
+        <li>Kogemus: 8 aastat koolis õpetamist</li>
+        <li>Metoodika: praktilised ülesanded, rühmatöö, projektõpe</li>
+      </ul>
+    </section>
+
+    <!-- Tunniplaan -->
+    <section id="tunniplaan">
+      <h2>Tunniplaan</h2>
+      <p>Siin on näide tunniplaanist (lihtne tabel):</p>
+      <div style="overflow:auto">
+        <table style="width:100%;border-collapse:collapse">
+          <thead>
+            <tr style="text-align:left">
+              <th>Päev</th><th>9:00-10:00</th><th>10:15-11:15</th><th>11:30-12:30</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Esmaspäev</td><td>Matemaatika</td><td>Eesti keel</td><td>Kehaline kasvatus</td></tr>
+            <tr><td>Teisipäev</td><td>Loodusõpetus</td><td>Inglise keel</td><td>Praktikum</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Materjalid -->
+    <section id="materjalid">
+      <h2>Õppematerjalid</h2>
+      <p>Siin on lingid ja lühikirjeldused: viktoriinid, slaidid, kodutööd ja lisalugemine.</p>
+      <div class="grid">
+        <div>
+          <h3>Loenguslaidid</h3>
+          <p>Lae alla .pdf või vaata veebis.</p>
+        </div>
+        <div>
+          <h3>Viktoriinid</h3>
+          <p>Interaktiivsed ülesanded ja tagasiside.</p>
+        </div>
+        <div>
+          <h3>Kodutööd</h3>
+          <p>Tähistatud kuupäevad ja juhised.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>Kui soovid minuga ühendust võtta, kirjuta e-postile või kasuta järgmist vormi:</p>
+      <form onsubmit="event.preventDefault();alert('Sõnum saadetud (näide).');">
+        <label style="display:block;margin-bottom:.4rem">Sinu nimi<br><input required type="text" name="name" style="width:100%;padding:.5rem;margin-top:.3rem" /></label>
+        <label style="display:block;margin-bottom:.4rem">E-post<br><input required type="email" name="email" style="width:100%;padding:.5rem;margin-top:.3rem" /></label>
+        <label style="display:block;margin-bottom:.4rem">Sõnum<br><textarea required name="message" rows="4" style="width:100%;padding:.5rem;margin-top:.3rem"></textarea></label>
+        <button type="submit" style="padding:.6rem 1rem;border-radius:8px;border:none;background:var(--accent);color:#fff">Saada</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Õpetaja nimi — Kõik õigused kaitstud</div>
+  </footer>
+
+  <script>
+    // Aastalõik
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Lihtne mobiilimenüü
+    const toggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('topMenu');
+    if(toggle){
+      toggle.addEventListener('click',()=>{
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        menu.style.display = expanded ? 'flex' : 'block';
+        menu.style.flexDirection = 'column';
+        menu.style.background = 'rgba(255,255,255,0.95)';
+        menu.style.padding = '0.6rem';
+        menu.style.borderRadius = '8px';
+      });
+    }
+
+    // Aktiivne nav-link, sujuv kerimine
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+        // rõhuta aktiivset linki
+        document.querySelectorAll('.menu a').forEach(x=>x.style.background='');
+        a.style.background='rgba(255,255,255,0.12)';
+      });
+    });
+  </script>
+</body>
+</html>
