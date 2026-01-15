@@ -1,1 +1,4 @@
-# intro
+# Minu Veeb (projektinimi)
+
+Lühikirjeldus: ...
+
