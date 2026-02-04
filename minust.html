@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="et">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Airika veebileht</title>
+  <!-- Stiililehe link (eraldi fail) -->
+  <link rel="stylesheet" href="styles.css">
+    <!-- JS fail -->
+  <script src="app.js"></script>
+</head>
+<body>
+  <!-- --------- PÄIS / NAV (tume taust) --------- -->
+  <!-- Kommentaar: päises on nav-menüü tumedal taustal ja 5 alamlehe-nime -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <img class="v-logo" src="Pildid/monetgen-minimalist-logo.jpg" alt="Logo on genereeritud MonetGen (Free Unlimited AI Logo Generator) abil" width="60" height="60">
+        <a href="#" class="logo"><span class="accent"></span></a>
+        <button id="mobile-menu-button" class="mobile-menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Ava menüü">
+          ☰
+        </button>
+      </div>
+
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Peamenüü">
+        <ul>
+          <!-- MENÜÜ -->
+          <li><a href="index.html" class="nav-link">Avaleht</a></li>
+          <li><a href="minust.html" class="nav-link active">Minust</a></li>
+          <li><a href="opetaja.html" class="nav-link">Õpetaja ise</a></li>
+          <li><a href="oppija.html" class="nav-link">Õppija</a></li>
+          <li><a href="organisatsioon.html" class="nav-link">Organisatsioon</a></li>
+          <li><a href="okosusteem.html" class="nav-link">Ökosüsteem</a></li>
+          <li><a href="lisaks.html" class="nav-link"><img src="Pildid/....png"></a></a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- --------- SISU (hele taust, tume tekst) --------- -->
+  <main class="site-main container" role="main">
+    <h1>Tutvustus</h1>
+
+    <!-- Lühike esitlus / oskused / õppetöö -->
+    <section class="about">
+      
+
+      <div class="grid-3">
+        <article>
+          <h3> <img src="Pildid/ikoon.png"> KES?</h3>
+          <p>Nimi: <strong> Airika Andruse </strong></p>
+        </article>
+
+        <article>
+          <h3><img src="Pildid/ikoon.png"> MIS?</h3>
+          <p>Amet(id): <strong> Informaatikaõpetaja, <br> Uurmistööde ja praktiliste tööde <br> (UPT) koordinaator, <br> 11.c klassi mentor</strong></p>
+        </article>
+
+        <article>
+          <h3><img src="Pildid/ikoon.png"> KUS?</h3>
+          <span>Kool: <strong>Jõhvi Gümnaasium</strong><br></span>
+           <span style="text-indent: 40px; display: inline-block;">
+  <strong><a href="https://johvig.ee/" target="_blank" rel="noopener noreferrer">johvig.ee</a></strong>
+</span>
+ 
+        </article>
+      </div>
+    </section>
+
+
+     <div class="grid-2">
+
+    <!-- VASAK: PILDID -->
+    <div class="image-box">
+    <div class="klick"><img src="Pildid/select.png"> </div>
+  <img id="mainImage" class="main"
+       src="Pildid/mina1.png"
+       alt="Peapilt">
+
+  <div class="thumbnails">
+    <img src="Pildid/mina1.png"
+         data-large="Pildid/mina1.png"
+         class="active"
+         onclick="changeImage(this)">
+
+    <img src="Pildid/mina2.jpg"
+         data-large="Pildid/mina2.jpg"
+         onclick="changeImage(this)">
+
+    <img src="Pildid/mina3.jpg"
+         data-large="Pildid/mina3.jpg"
+         onclick="changeImage(this)">
+  </div>
+</div>
+
+
+
+    <!-- PAREM: TEKST -->
+    <div class="content1">
+      <p>
+        Alustasin tööd õpetajana 2015. aastal Kohtla-Järve Järve Gümnaasiumis. Olles ise siis veel üliõpilane õpetasin väikse koormusega põhikooli kolmandas astmes matemaatikat.
+        2017 aasta kevadel läksin osalise koormusega tööle Jõhvi Gümnaasiumisse. Pärast suvevaheaega jätkasin sügisel (2017) Jõhvi Gümnaasumis juba täiskoormusega informaatikaõpetaja ja haridustehnoloogi ametikohtadel. 
+        2022 aastal täitus mul <a href="https://1drv.ms/b/c/29BD3C0B8391CAF9/IQBYYYzngJdATrOStJDk_C8sAcEC3tKwEMbP3Uh3tgP1tbU?e=ohTQ8j" target="_blank" rel="noopener noreferrer">5. tööjuubel</a>.
+        Nüüdseks olen õpetajana kokku töötanud 10,5 aastat, Jõhvi Gümnaasiumis 8,5 aastat.
+      </p>
+      
+       <h2><a href="https://www.canva.com/design/DAG-r51qKTs/cpZmk4thhfTeWcBVkJYg2A/view?utm_content=DAG-r51qKTs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he153aa64a5"
+   target="_blank" rel="noopener noreferrer">
+  <img src="Pildid/ikoon.png" alt="" style="width:70px; vertical-align:middle; margin-right:4px;">
+  CV
+  <img src="Pildid/ikoon.png"
+     alt=""
+     style="width:70px; vertical-align:middle; margin-right:4px; transform: scaleX(-1);">
+</a>
+</h2>
+
+    </div>
+
+  </div>
+
+    </section>
+  
+    <details>
+  <summary><h2>Üldoskused</h2>
+    <img src="Pildid/ikoon.png" alt="" class="toggle-icon" style="width:50px; vertical-align:middle; margin-right:4px;">
+  </summary>
+  <h3>B.2 Õpetaja, tase 7 üldoskused:</h3>
+  <ol>
+    <li>Analüüsi- ja sünteesioskus</li>
+    <p>Koordineerin uurimistööde ja praktiliste tööde (UPT) terviklikku protsessi Jõhvi Gümnaasiumis, kus iga aasta teevad, koostavad ja kaitsevad enda UPT-d kuue klassi õpilased ehk ligikaudu 150 õpilast ja u 100 UPT tööd(praktilisi töid võib teha kahekesi).
+    Informaatikaõpetajana ja infotehnoloogia (IT) valikmooduli õpetajana juhendan õpilasi katsetama või looma erinevaid tehnoloogilisi keskkondi,
+     ning programme. Mentorina jälgin enda klassi õppeedukust, toetan õpilasi gümnaasiumis õppides, aidates leida vastuseid nende küsimustele.</p>
+    <li>Õppimisoskus</li>
+    <p>Katsetan uusi keskkondi ning programme, hetkel on mul fookuses näiteks erinevad tehisintellektid ja nende uuendused. Kuna õppegrupid on erinevad siis vajadusel kohandan enda õpetamismeetodeid ja -tegevusi vastavalt paralleelklasside ja õpilaste järgi.
+      Mentorina aitan õpilastel planeerida õppetegevusi ja vajadusel õppimisel motivatsiooni hoida.
+    </p>
+    <li>Innovatsioonipädevus</li>
+    <p>Alates eelmisest õppeaastast olen kohandanud oma õppematerjale ja õpitegevusi, muutes neid või lisades juurde erinevaid võimalusi, kuidas neid saab tehisintellektide abil teostada. TI-Hüppeks on vaja ettevalmistuda.</p>
+    <li>Väärtustest lähtumine</li>
+    <p>Järgin Jõhvi Gümnaasiumi põhiväärtusi. "Meie õppija ja õpetaja on inimlik, loov ja tark." <a href="https://johvig.ee/meie-koolist/pohivaartused" target="_blank" rel="noopener noreferrer"> Põhiväärtused</a><br>
+    Suunan õpilasi ausalt töötama, õpetades kasutama allikaid õigesti, viitama ja vältima plagiaati nii õppetöös üldiselt kui  uurimistööde ja praktiliste tööde tegemisel.
+    </p>
+    <li>Säilenõtkus</li>
+    <p>Arvan, et muutused aitavad leida uusi lahendsi. "Kui ei saa ühtemooid siis saab teisiti." Igale olukorrale on lahendus.</p>
+    <li>Suhtlemisoskus</li>
+    <p>Viin enda klassis läbi iga aastaseid lastevanematekoosolekuid, arenguvestlusi õpilaste ja lapsevanematega. Suhtlen õpilaste ja töökaaslastega avatult, märkan inimesi, kuulan ning vajadusel toetan või abistan.</p>
+    <li>Koostööoskus</li>
+    <p>Informaatika ja IT valikmooduli tundide ettevalmistamisel katsetan ja arutlen koos haridustehnoloogiga erinevate lahenduste võimaluste ja ka piirangute üle. Alustasime kood/Jõhvi tehnoloogiakooliga koostööd ning nende veebikeskkonnas saavad meie õpilased iseseisvalt õppides läbida IT kursuseid.
+    UPT õppetegevustes juhendan, abistan nii õpilasi kui ka juhendajaid ning retsensente.</p>
+    <li>Digipädevus</li>
+    <p>Kasutan igapäevaselt enda tundides digivahendeid ja -keskkondi. Õpetan eetilist veebikäitumist (küberturvalisus, -teadlikkus, andmekaitse ja autoriõiguseed). Olen enda õppematerjalidest ja -tegevustest koostanud <a href="https://moodle.edu.ee/" target="_blank" rel="noopener noreferrer">Moodles</a> kursused. 
+    Kui töötasin Jõhvi Gümnaasiumis haridustehnoloogi ametis siis korraldasin ja viisin läbi digiteemalis sisekoolitusi. Lõpetasin rakendusinfotehnoloogia erialal rakenduskõrghariduse spetsialiseerudes tarkvaraarendusele.
+    Koostasin antud veebilehe (e-portfoolio) HTML, CSS ja JavaScripti koodidena.
+  </p>
+  </ol>
+</details>
+
+  </main>
+
+
+  <!-- --------- JALUS (tume taust, sarnane menüü osale) --------- -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+    
+  </div>
+
+  <div class="footer-right">
+    <img src="Pildid/valgelogo.png">
+    <strong>Airika Andruse</strong>
+    © 2026 Veebilehe õigused on kaitstud.
+  </div>
+  </footer>
+
+</body>
+</html>

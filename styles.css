@@ -1,0 +1,496 @@
+/* styles.css — puhastatud ja loetav */
+
+/* ===== RESET & ÜLDINE ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #0b1220;
+  background: #101827;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.pildid {
+  display: flex;
+  justify-content: center; 
+  padding-left: 20px;
+  gap: 20px;             
+  align-items: center;
+}
+
+.pildid img {
+  width: 35%;
+  height: auto;
+}
+
+.pildid img.keskmine {
+  width: 21.5%; 
+}
+
+
+/* ===== HEADER ===== */
+
+.site-header {
+  background: linear-gradient(180deg, #061d4b, #101827);
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 10px rgba(2, 6, 23, 0.12);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.logo {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.v-logo {
+  border-radius: 12px;
+}
+
+/* NAV MENU */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.main-nav a {
+  color: #e6eef6;
+  text-decoration: none;
+  padding: 10px 6px;
+  border-radius: 8px;
+  display: flex;               /* joondab logo ja teksti */
+  align-items: center;
+  font-weight: 600;
+  padding: 3px 5px;
+
+}
+
+.main-nav a.active {
+  background: rgba(125, 211, 252, 0.12);
+  color: #aeeefc;
+}
+
+/* NAV LOGO */
+.main-nav a img {
+  height: 30px;                /* sama visuaalne suurus kui tekst */
+  transform: rotate(180deg);   /* ümberpööratud logo */
+}
+
+/* MOBILE MENU BUTTON */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+h3 {
+  margin-top: 10;
+  padding-left: 40px;
+  color: #89a1cf;
+}
+
+h4 {
+  margin-top: 10;
+  padding-left: 40px;
+}
+
+/* MAIN CONTENT */
+.site-main {
+  background: #ffffff;
+  color: #02215e;
+  border-radius: 10px;
+  padding-top: 5px;
+  margin: 10px auto;
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.04);
+}
+
+.site-main h1{
+  margin-left: 20px;
+  margin-bottom: 0.2rem;
+}
+.site-main p {
+  margin-top: 0.2rem;    /* ⬅ vähendab vahet pealkirjaga */
+}
+
+
+/* ===== INTRO (AINUS DEFINITSIOON) ===== */
+
+.intro {
+  position: relative;
+  min-height: 72vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+/* taustapildid */
+.intro_bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1s ease, transform 1.6s ease;
+  z-index: 0;
+}
+
+.intro_bg.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* overlay */
+.intro_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* intro sisu */
+.intro_content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.content1 p{
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+.content h2{
+  color: #02215e;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.intro_content h1 {
+  font-size: 50px;
+}
+
+.content2 p{
+  margin-left: -20px;
+}
+/* nupud */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  background: rgba(125, 211, 252, 0.12);
+  color: #aeeefc;
+  text-decoration: none;
+}
+
+/* ===== GRID 2 (PILT + TEKST) ===== */
+
+.grid-2 {
+  text-align: justify;
+  display: grid;
+  grid-template-columns: 260px 1.1fr;
+  gap: 8px;
+  max-width: 1080px;
+  padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.image-box {
+  position: relative;
+  background: #ffffff;
+  border: none;
+  border-radius: 1px;
+  padding: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 5px;
+  align-items: stretch;
+}
+
+/* peapilt */
+.image-box {
+  position: relative;
+  display: flex;
+  gap: 6px;
+  padding: 3px;               /* väiksem raam */
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  height: 240px;              /* KÕIGE OLULISEM: fikseeritud kõrgus */
+  overflow: hidden;           /* ei lase mingil sisul kasti suurendada */
+  align-items: stretch;       /* et mõlemad veerud täidaksid kõrguse */
+  box-sizing: border-box;     /* padding ei kisu kõrgust välja */
+}
+
+/* peapilt: võta kogu vasak veerg ja täida kõrgus */
+.image-box img.main {
+  width: calc(100% - 76px);   /* jäta ruumi thumbnail-veerule ja gapile */
+  height: 100%;               /* täidab .image-box kõrguse */
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;             /* eemaldab inline-image tühiku */
+  box-sizing: border-box;
+}
+
+/* thumbnail veerg: sama kõrgus kui konteiner */
+.thumbnails {
+  width: 70px;
+  height: 100%;               /* sama kui .image-box (240px) */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-sizing: border-box;
+}
+
+/* väikesed pildid: jagame kogu kõrguse 3-ks, arvestades gap'e */
+.thumbnails img {
+  width: 100%;
+  height: calc((100% - 12px) / 3); /* 2 × gap (6px + 6px) = 12px */
+  object-fit: cover;
+  display: block;
+  filter: blur(2px) brightness(0.7);
+  transition: filter 0.2s, opacity 0.2s, border 0.2s;
+  box-sizing: border-box;
+}
+
+.klick {
+  position: absolute;
+  bottom: 100px;
+  right: 26px;
+  z-index: 10;
+}
+
+.klick img {
+  width: 24px;
+  height: auto;
+  display: block;
+}
+
+/* ===== GRID 3 ===== */
+
+.grid-3 {
+  text-align: justify;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.grid-3 article {
+  background: #edf1f3;
+  padding: 0px 20px; 
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.02);
+}
+
+.grid-3 img {
+  height: 3.2em;
+  width: auto;
+  vertical-align: middle;
+}
+
+.grid-3 h3 {
+  margin-top: 5px;
+  margin-left: -30px;
+  color: #02215e;
+}
+
+/* ===== SISU ===== */
+
+.content {
+  padding-top: 50px;
+}
+
+.two-part-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-left,
+.section-right {
+  background: #f2f4f6;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.section-left h2,
+.section-right h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+
+/* ===== FOOTER ===== */
+
+.site-footer {
+  background: linear-gradient(180deg, #101827, #061d4b);
+  color: #ffffff;
+  margin-top: 5px;
+  padding: 10px 0;
+}
+
+.footer-inner {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.site-footer .footer-right img {
+  width: 50px !important;
+  max-width: 50px !important;
+  height: auto !important;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 850px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+.grid-3 article h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;   /* ↓ väiksem vahe */
+}
+
+.grid-3 article p {
+  margin-top: 0;        /* eemaldab vaikimisi vahe */
+  margin-bottom: 20;
+  padding: 0;
+}
+
+details summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+details summary h2 {
+  margin: 0;
+  padding-left: 40px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* pilt = nool */
+.toggle-icon {
+  width: 70px;
+  margin-left: 6px;
+  transition: transform 0.25s ease;
+}
+
+/* pööramine kui details on avatud */
+details[open] .toggle-icon {
+  transform: rotate(90deg);
+}
+  details p{
+    margin-top: 0.2rem;
+    margin-left: -20px;
+
+  }
+  
+  ol {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+  }
+
+  li{
+    font-weight: bold;
+  }
+
+   .paren-list {
+    list-style: none;
+    counter-reset: item;
+    padding-left: 0;
+  }
+
+  .paren-list li {
+    counter-increment: item;
+    margin: 0.4em 0;
+    font-weight: normal;
+  }
+
+  .paren-list li::before {
+    content: counter(item) ") ";
+    font-weight: normal;
+  }
+  
