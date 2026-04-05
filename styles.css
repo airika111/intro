@@ -364,6 +364,15 @@ h4 {
   font-size: 1.6rem;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 
 /* ===== FOOTER ===== */
 
